@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
+        ATMOperation op = new ATMOperationImpl();
         int atmnumber = 12345;
         int atmpin = 123;
         Scanner scan = new Scanner(System.in);
@@ -19,7 +19,7 @@ public class Main {
                 System.out.println("Enter Choice : ");
                 int ch = scan.nextInt();
                 if(ch==1){
-
+                    op.viewBalance();
                 }
                 else if(ch==2)
                 {
@@ -27,7 +27,9 @@ public class Main {
                 }
                 else if(ch==3)
                 {
-
+                    System.out.println("Enter Amount to Deposit");
+                    double depositAmount = scan.nextDouble();
+                    op.depositAmount(depositAmount);
                 }
                 else if(ch==4)
                 {
