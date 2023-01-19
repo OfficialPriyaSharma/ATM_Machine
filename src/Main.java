@@ -3,18 +3,16 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-<<<<<<< HEAD
-        ATMOperation op = new ATMOperationImpl();
-=======
 
->>>>>>> 1b10d1ce81b0b56b0f70c870d3deec66f4fd6d38
+        ATMOperation op = new ATMOperationImpl();
+
         int atmnumber = 12345;
         int atmpin = 123;
         Scanner scan = new Scanner(System.in);
         System.out.println(" *************** WELCOME TO ATM MACHINE *************** ");
-        System.out.println("Enter the ATM Number : ");
+        System.out.println(" Enter the ATM Number : ");
         int atmNumber = scan.nextInt();
-        System.out.println("Enter the ATM Pin : ");
+        System.out.println(" Enter the ATM Pin : ");
         int pin = scan.nextInt();
         if((atmnumber==atmNumber)&&(atmpin==pin))
         {
@@ -23,43 +21,43 @@ public class Main {
                 System.out.println("Enter Choice : ");
                 int ch = scan.nextInt();
                 if(ch==1){
-<<<<<<< HEAD
-                    op.viewBalance();
-=======
 
->>>>>>> 1b10d1ce81b0b56b0f70c870d3deec66f4fd6d38
+                    op.viewBalance();
+
+
                 }
                 else if(ch==2)
                 {
+                    System.out.println(" Enter the Amount to Withdraw ");
+                    double withdrawAmount = scan.nextDouble();
+                    op.withdrawAmount(withdrawAmount);
 
                 }
                 else if(ch==3)
                 {
-<<<<<<< HEAD
+
                     System.out.println("Enter Amount to Deposit");
                     double depositAmount = scan.nextDouble();
                     op.depositAmount(depositAmount);
-=======
 
->>>>>>> 1b10d1ce81b0b56b0f70c870d3deec66f4fd6d38
                 }
                 else if(ch==4)
                 {
-
+                    op.viewMiniStatement();
                 }
                 else if(ch==5)
                 {
-                    System.out.println("Collect your ATM Card\n Thank you for using ATM Machine");
+                    System.out.println(" Collect your ATM Card\n Thank you for using ATM Machine");
                     System.exit(0);
                 }
                 else{
-                    System.out.println("Please enter correct choice");
+                    System.out.println(" Please enter correct choice ");
                 }
             }
         }
 
         {
-            System.out.println("Incorrect ATM Number or Pin..!!");
+            System.out.println(" Incorrect ATM Number or Pin..!! ");
             System.exit(0);
         }
     }
